@@ -1,5 +1,5 @@
 <?php
-class TinyHtmlMinifier {
+class HtmlMinifier {
     function __construct($options) {
         $this->options = $options;
         $this->output = '';
@@ -230,9 +230,9 @@ class TinyHtmlMinifier {
         return preg_replace('!\s+!', ' ', $element);
     }
 }
-class TinyMinify {
+class Minify {
     static function html($html, $options = []) {
-        $minifier = new TinyHtmlMinifier($options);
+        $minifier = new HtmlMinifier($options);
         return $minifier->minify($html);
     }
 }
